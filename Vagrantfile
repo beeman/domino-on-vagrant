@@ -1,9 +1,11 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+gui		 = true
+
 box      = 'centos-6-amd64'
 url      = 'https://dl.dropboxusercontent.com/s/uky9fimq2eal2l4/centos-6-amd64.box'
-hostname = 'vagrant'
+hostname = 'dov'
 domain   = 'domino.dev'
 ip       = '10.2.2.2'
 ram      = '1024'
@@ -21,8 +23,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provider :virtualbox do |vb|
     vb.customize ["modifyvm", :id, "--memory", ram, "--name", hostname, "--natdnshostresolver1", "on"]
+
+  	# VirtualBox console
+    vb.gui = gui
   end
 
-  config.vm.provision "shell", path: "provision.sh"
+  config.vm.provision "shell", path: "scripts/provision.sh"
+
 
 end
