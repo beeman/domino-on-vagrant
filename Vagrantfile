@@ -1,7 +1,7 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-gui		   = false
+gui      = false
 
 box      = 'centos-6-amd64'
 url      = 'https://dl.dropboxusercontent.com/s/uky9fimq2eal2l4/centos-6-amd64.box'
