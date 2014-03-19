@@ -49,9 +49,9 @@ After downloading this it will start the virtual machine and run some scripts. T
 When the base installation is finished the Domino server will be installed and configured. The output of all this should be visible in the terminal where you ran the above command.
 
 
-## Defaults
+## Default settings
 
-When the machine is installed you should be able to connect to it via a browser. We will mention some of the default settings here. See the Configuration section below to change these defaults.
+When the machine is installed you should be able to connect to Domino using a Notes Client, Domino Designer/Administrator or by using a browser. We will mention some of the default settings here. See the Configuration section below to change these defaults.
 
 ### Network configuration
 
@@ -61,24 +61,37 @@ When the machine is installed you should be able to connect to it via a browser.
 
 ### Credentials
 
+#### Operation System
+
 The user in the linux guest has the following credentials. This is main user of the guest and it is running the Domino server too.
 
     username   : vagrant
     group      : vagrant
 
+#### Domino
+
 To login on the Domino environment you need to use the following credentials
 
-    TODO add instructions
+    username   : admin
+    password   : dominodev
 
 ## Usage
 
-### DNS
+### WebAdmin
+
+A lot of admin functionality is available through webadmin.nsf. The tool can be found on one of the following links, depending on the DNS configuration (see section on hostnames below)
+
+* http://dov.domino.dev/webadmin.nsf
+* http://10.2.2.2/webadmin.nsf
+* http://dov/webadmin.nsf
+
+### Hostnames
 
 You can easily access the guest by entering it to your hosts file
 
     10.2.2.2 dov dov.domino.dev
 
-
+Another option is to install a tool like dnsmasq that can locally point the domain domino.dev to the IP address of the server.
 
 ### Login to this virtual machine using vagrant
 

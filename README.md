@@ -10,20 +10,22 @@ This projects aims to deliver an environment to quickly deploy a Domino server o
 
 ## Reasons
 
-Some of the reasons why I created it:
+I created this because I want to:
 
-* being able to create separate Domino environments for testing and developing
+* run my Domino server on Linux instead of Windows
+* be able to create separate Domino environments for testing and developing
 * not manually installing these environments time after time
-* show Domino/XPages developers the power of Vagrant
 * give something to the community
-* I think it's fun to do :-)
+* show Domino/XPages developers the power of Vagrant
+
+Next to the above I just think it's fun to do and cool to have :-)
 
 ## Usage
 [Learn how to use it by reading the tutorial.](TUTORIAL.md)
 
 ## Bugs or feature requests
 
-Please use the GitHub issue tracker to let me know what you want
+Please use the GitHub issue tracker to let me know what you like to see changed. Of course I'm also open for pull requests!
 
 ## License
 
