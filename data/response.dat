@@ -1,31 +1,23 @@
 ################################################################################
 #
-# InstallShield Options File Template
+# InstallShield Options File
 #
 # Wizard name: Install
 # Wizard source: setup.jar
-# Created on: Tue Mar 18 23:21:59 UTC 2014
+# Created on: Tue Mar 18 23:46:49 UTC 2014
 # Created by: InstallShield Options File Generator
 #
-# This file can be used to create an options file (i.e., response file) for the
-# wizard "Install". Options files are used with "-options" on the command line
-# to modify wizard settings.
+# This file contains values that were specified during a recent execution of
+# Install. It can be used to configure Install with the options specified below
+# when the wizard is run with the "-options" command line option. Read each
+# setting's documentation for information on how to change its value.
 # 
-# The settings that can be specified for the wizard are listed below. To use
-# this template, follow these steps:
+# A common use of an options file is to run the wizard in silent mode. This lets
+# the options file author specify wizard settings without having to run the
+# wizard in graphical or console mode. To use this options file for silent mode
+# execution, use the following command line arguments when running the wizard:
 # 
-#    1. Enable a setting below by removing leading '###' characters from the
-#    line (search for '###' to find settings you can change).
-# 
-#    2. Specify a value for a setting by replacing the characters '<value>'.
-#    Read each setting's documentation for information on how to specify its
-#    value.
-# 
-#    3. Save the changes to the file.
-# 
-#    4. To use the options file with the wizard, specify -options <file-name>
-#    as a command line argument to the wizard, where <file-name> is the name
-#    of this options file.
+#    -options "/data/response.dat" -silent
 #
 ################################################################################
 
@@ -39,7 +31,7 @@
 #
 
 
-### -G licenseAccepted=<value>
+-G licenseAccepted=true
 
 
 ################################################################################
@@ -49,7 +41,7 @@
 #
 
 
-### -W InstallDataOnlyOptionPanel.InstallDataOnly="<value>"
+-W InstallDataOnlyOptionPanel.InstallDataOnly=""
 
 
 ################################################################################
@@ -65,7 +57,7 @@
 #
 
 
-### -P installLocation=<value>
+-P installLocation="/opt/ibm/domino"
 
 
 ################################################################################
@@ -80,7 +72,7 @@
 #
 
 
-### -W programFiles.isPartitioned=<value>
+-W programFiles.isPartitioned=false
 
 
 ################################################################################
@@ -96,7 +88,7 @@
 #
 
 
-### -W normalData.installLocationData=<value>
+-W normalData.installLocationData="/local/notesdata"
 
 
 ################################################################################
@@ -112,7 +104,7 @@
 #
 
 
-### -W partitionData.numPartitions=<value>
+-W partitionData.numPartitions=0
 
 
 ################################################################################
@@ -128,642 +120,8 @@
 #
 
 
-### -W unixPartitionDestinationPanel.numPartitions=<value>
+-W unixPartitionDestinationPanel.numPartitions=0
 
 
 ################################################################################
 #
-# IBM Domino Social Edition Install Partitions Locations
-#
-# The install location of the data files for each partition. Specify a valid
-# directory into which the data files should be installed. This property is
-# ignored for non-partitioned installs. It is suggested that you use the name of
-# your server as the name of the directory. For example, to install the
-# partitioned data files for MyServer , use
-# 
-#    -W unixPartitionDestinationPanel.installLocationData0="C:\Program
-#    Files\IBM\Domino\MyServer"
-# 
-# To install multiple partitions use a separate directory line for each
-# partition, for example to install 3 partitions, use
-# 
-#    -W unixPartitionDestinationPanel.installLocationData0="C:\Program
-#    Files\IBM\Domino\MyServer1"
-# 
-#    -W unixPartitionDestinationPanel.installLocationData1="C:\Program
-#    Files\IBM\Domino\MyServer2"
-# 
-#    -W unixPartitionDestinationPanel.installLocationData2="C:\Program
-#    Files\IBM\Domino\MyServer3"
-#
-
-
-### -W unixPartitionDestinationPanel.installLocationData0=<value>
-
-
-################################################################################
-#
-# IBM Domino Social Edition Install Partitions Locations
-#
-# The install location of the data files for each partition. Specify a valid
-# directory into which the data files should be installed. This property is
-# ignored for non-partitioned installs. It is suggested that you use the name of
-# your server as the name of the directory. For example, to install the
-# partitioned data files for MyServer , use
-# 
-#    -W unixPartitionDestinationPanel.installLocationData0="C:\Program
-#    Files\IBM\Domino\MyServer"
-# 
-# To install multiple partitions use a separate directory line for each
-# partition, for example to install 3 partitions, use
-# 
-#    -W unixPartitionDestinationPanel.installLocationData0="C:\Program
-#    Files\IBM\Domino\MyServer1"
-# 
-#    -W unixPartitionDestinationPanel.installLocationData1="C:\Program
-#    Files\IBM\Domino\MyServer2"
-# 
-#    -W unixPartitionDestinationPanel.installLocationData2="C:\Program
-#    Files\IBM\Domino\MyServer3"
-#
-
-
-### -W unixPartitionDestinationPanel.installLocationUser0=<value>
-
-
-################################################################################
-#
-# User Input Field - UserName
-#
-#
-
-
-### -W NameUserGroupPanelWin.UserName="<value>"
-
-
-################################################################################
-#
-# User Input Field - GroupName
-#
-#
-
-
-### -W NameUserGroupPanelWin.GroupName="<value>"
-
-
-################################################################################
-#
-# User Input Field - UserName
-#
-#
-
-
-### -W NameUserGroupPanel.UserName="<value>"
-
-
-################################################################################
-#
-# User Input Field - GroupName
-#
-#
-
-
-### -W NameUserGroupPanel.GroupName="<value>"
-
-
-################################################################################
-#
-# User Input Field - CreateOptIbmDomino
-#
-#
-
-
-### -W InstallOptionPanel.CreateOptIbmDomino="<value>"
-
-
-################################################################################
-#
-# User Input Field - ServerSetupType
-#
-#
-
-
-### -W ServerSetupPanel.ServerSetupType="<value>"
-
-
-################################################################################
-#
-# User Input Field - CreateOptIbmDomino
-#
-#
-
-
-### -W InstallOptionPanelExpress.CreateOptIbmDomino="<value>"
-
-
-################################################################################
-#
-# User Input Field - ServerSetupType
-#
-#
-
-
-### -W InstallOptionPanelExpress2.ServerSetupType="<value>"
-
-
-################################################################################
-#
-# Setup Type
-#
-# The setup type to be used when installing the product. Legal values are:
-# 
-#    UtilityServer       - Domino Utility Server Express: Installs a Domino
-#                          server that provides application services only. Note
-#                          that it does not include support for messaging
-#                          services. See full licensing text for details.
-#    MessagingServer     - Domino Messaging Server Express: Installs a Domino
-#                          server that provides messaging services. Note that
-#                          it does not include support for application services
-#                          or Domino clusters.
-#    CollaborationServer - Domino Collaboration Server Express: Installs a
-#                          Domino server that provides both messaging and
-#                          application services.
-# 
-# For example, to specify that the "Domino Utility Server Express" setup type is
-# selected, use
-# 
-#    -W ExpressSetupTypePanel.selectedSetupTypeId=UtilityServer
-# 
-# You may also set the setup type to nothing by using
-# 
-#    -W ExpressSetupTypePanel.selectedSetypTypeId=
-# 
-# This clears the current setup type and prevents any changes to the set of
-# selected features. Use this option whenever you set feature active states in
-# this options file. If you do not clear the selected setup type, the setup type
-# panel will override any changes you make to feature active states using this
-# file.
-#
-
-
-### -W ExpressSetupTypePanel.selectedSetupTypeId=<value>
-
-
-################################################################################
-#
-# Setup Type
-#
-# The setup type to be used when installing the product. Legal values are:
-# 
-#    UtilityServer    - Domino Utility Server: Installs a Domino server that
-#                       provides application services only. Note that it does
-#                       not include support for messaging services. See full
-#                       licensing text for details.
-#    MessagingServer  - Domino Messaging Server: Installs a Domino server that
-#                       provides messaging services. Note that it does not
-#                       include support for application services or Domino
-#                       clusters.
-#    EnterpriseServer - Domino Enterprise Server: Installs a Domino server that
-#                       provides both messaging and application services.
-#    CustomServer     - Customize Domino Server: Allows you to select the
-#                       features you want to install.
-# 
-# For example, to specify that the "Domino Utility Server" setup type is
-# selected, use
-# 
-#    -W SetupTypePanel.selectedSetupTypeId=UtilityServer
-# 
-# You may also set the setup type to nothing by using
-# 
-#    -W SetupTypePanel.selectedSetypTypeId=
-# 
-# This clears the current setup type and prevents any changes to the set of
-# selected features. Use this option whenever you set feature active states in
-# this options file. If you do not clear the selected setup type, the setup type
-# panel will override any changes you make to feature active states using this
-# file.
-#
-
-
-### -W SetupTypePanel.selectedSetupTypeId=<value>
-
-
-################################################################################
-#
-# "License" Feature
-#
-# The selection state of the "License" feature. Legal values are:
-# 
-#    true  - Indicates that the feature is selected for installation
-#    false - Indicates that the feature is not selected for installation
-# 
-# For example, to select "License" for installation, use
-# 
-#    -P LicenseFeature.active=true
-#
-
-
-### -P LicenseFeature.active=<value>
-
-
-################################################################################
-#
-# "Program Files" Feature
-#
-# The selection state of the "Program Files" feature. Legal values are:
-# 
-#    true  - Indicates that the feature is selected for installation
-#    false - Indicates that the feature is not selected for installation
-# 
-# For example, to select "Program Files" for installation, use
-# 
-#    -P ProgramFilesFeature.active=true
-#
-
-
-### -P ProgramFilesFeature.active=<value>
-
-
-################################################################################
-#
-# "Billing Support" Feature
-#
-# The selection state of the "Billing Support" feature. Legal values are:
-# 
-#    true  - Indicates that the feature is selected for installation
-#    false - Indicates that the feature is not selected for installation
-# 
-# For example, to select "Billing Support" for installation, use
-# 
-#    -P BillingSupportFeature.active=true
-#
-
-
-### -P BillingSupportFeature.active=<value>
-
-
-################################################################################
-#
-# "Clustering Support" Feature
-#
-# The selection state of the "Clustering Support" feature. Legal values are:
-# 
-#    true  - Indicates that the feature is selected for installation
-#    false - Indicates that the feature is not selected for installation
-# 
-# For example, to select "Clustering Support" for installation, use
-# 
-#    -P ClusteringSupportFeature.active=true
-#
-
-
-### -P ClusteringSupportFeature.active=<value>
-
-
-################################################################################
-#
-# "Java Support" Feature
-#
-# The selection state of the "Java Support" feature. Legal values are:
-# 
-#    true  - Indicates that the feature is selected for installation
-#    false - Indicates that the feature is not selected for installation
-# 
-# For example, to select "Java Support" for installation, use
-# 
-#    -P bean2236.active=true
-#
-
-
-### -P bean2236.active=<value>
-
-
-################################################################################
-#
-# "Messaging Server Files" Feature
-#
-# The selection state of the "Messaging Server Files" feature. Legal values are:
-# 
-#    true  - Indicates that the feature is selected for installation
-#    false - Indicates that the feature is not selected for installation
-# 
-# For example, to select "Messaging Server Files" for installation, use
-# 
-#    -P bean1915.active=true
-#
-
-
-### -P bean1915.active=<value>
-
-
-################################################################################
-#
-# "Utility Server Files" Feature
-#
-# The selection state of the "Utility Server Files" feature. Legal values are:
-# 
-#    true  - Indicates that the feature is selected for installation
-#    false - Indicates that the feature is not selected for installation
-# 
-# For example, to select "Utility Server Files" for installation, use
-# 
-#    -P bean3522.active=true
-#
-
-
-### -P bean3522.active=<value>
-
-
-################################################################################
-#
-# "Enterprise Server Files" Feature
-#
-# The selection state of the "Enterprise Server Files" feature. Legal values
-# are:
-# 
-#    true  - Indicates that the feature is selected for installation
-#    false - Indicates that the feature is not selected for installation
-# 
-# For example, to select "Enterprise Server Files" for installation, use
-# 
-#    -P bean3569.active=true
-#
-
-
-### -P bean3569.active=<value>
-
-
-################################################################################
-#
-# "Data Files" Feature
-#
-# The selection state of the "Data Files" feature. Legal values are:
-# 
-#    true  - Indicates that the feature is selected for installation
-#    false - Indicates that the feature is not selected for installation
-# 
-# For example, to select "Data Files" for installation, use
-# 
-#    -P DataFilesFeature.active=true
-#
-
-
-### -P DataFilesFeature.active=<value>
-
-
-################################################################################
-#
-# "Required Templates" Feature
-#
-# The selection state of the "Required Templates" feature. Legal values are:
-# 
-#    true  - Indicates that the feature is selected for installation
-#    false - Indicates that the feature is not selected for installation
-# 
-# For example, to select "Required Templates" for installation, use
-# 
-#    -P beanRequiredTemplates.active=true
-#
-
-
-### -P beanRequiredTemplates.active=<value>
-
-
-################################################################################
-#
-# "Administration Templates" Feature
-#
-# The selection state of the "Administration Templates" feature. Legal values
-# are:
-# 
-#    true  - Indicates that the feature is selected for installation
-#    false - Indicates that the feature is not selected for installation
-# 
-# For example, to select "Administration Templates" for installation, use
-# 
-#    -P beanAdministrationTemplates.active=true
-#
-
-
-### -P beanAdministrationTemplates.active=<value>
-
-
-################################################################################
-#
-# "Optional Templates" Feature
-#
-# The selection state of the "Optional Templates" feature. Legal values are:
-# 
-#    true  - Indicates that the feature is selected for installation
-#    false - Indicates that the feature is not selected for installation
-# 
-# For example, to select "Optional Templates" for installation, use
-# 
-#    -P beanOptionalTemplates.active=true
-#
-
-
-### -P beanOptionalTemplates.active=<value>
-
-
-################################################################################
-#
-# "Certificate Management" Feature
-#
-# The selection state of the "Certificate Management" feature. Legal values are:
-# 
-#    true  - Indicates that the feature is selected for installation
-#    false - Indicates that the feature is not selected for installation
-# 
-# For example, to select "Certificate Management" for installation, use
-# 
-#    -P beanCertificateManagement.active=true
-#
-
-
-### -P beanCertificateManagement.active=<value>
-
-
-################################################################################
-#
-# "Readme File" Feature
-#
-# The selection state of the "Readme File" feature. Legal values are:
-# 
-#    true  - Indicates that the feature is selected for installation
-#    false - Indicates that the feature is not selected for installation
-# 
-# For example, to select "Readme File" for installation, use
-# 
-#    -P beanReadme.active=true
-#
-
-
-### -P beanReadme.active=<value>
-
-
-################################################################################
-#
-# "Dojo" Feature
-#
-# The selection state of the "Dojo" feature. Legal values are:
-# 
-#    true  - Indicates that the feature is selected for installation
-#    false - Indicates that the feature is not selected for installation
-# 
-# For example, to select "Dojo" for installation, use
-# 
-#    -P beanDojo.active=true
-#
-
-
-### -P beanDojo.active=<value>
-
-
-################################################################################
-#
-# "XPages" Feature
-#
-# The selection state of the "XPages" feature. Legal values are:
-# 
-#    true  - Indicates that the feature is selected for installation
-#    false - Indicates that the feature is not selected for installation
-# 
-# For example, to select "XPages" for installation, use
-# 
-#    -P beanXSPages.active=true
-#
-
-
-### -P beanXSPages.active=<value>
-
-
-################################################################################
-#
-# "Domino Enterprise Connection Services" Feature
-#
-# The selection state of the "Domino Enterprise Connection Services" feature.
-# Legal values are:
-# 
-#    true  - Indicates that the feature is selected for installation
-#    false - Indicates that the feature is not selected for installation
-# 
-# For example, to select "Domino Enterprise Connection Services" for
-# installation, use
-# 
-#    -P DECSFeature.active=true
-#
-
-
-### -P DECSFeature.active=<value>
-
-
-################################################################################
-#
-# "Domino Offline Services" Feature
-#
-# The selection state of the "Domino Offline Services" feature. Legal values
-# are:
-# 
-#    true  - Indicates that the feature is selected for installation
-#    false - Indicates that the feature is not selected for installation
-# 
-# For example, to select "Domino Offline Services" for installation, use
-# 
-#    -P DOLSFeature.active=true
-#
-
-
-### -P DOLSFeature.active=<value>
-
-
-################################################################################
-#
-# "IBM iNotes" Feature
-#
-# The selection state of the "IBM iNotes" feature. Legal values are:
-# 
-#    true  - Indicates that the feature is selected for installation
-#    false - Indicates that the feature is not selected for installation
-# 
-# For example, to select "IBM iNotes" for installation, use
-# 
-#    -P DWAFeature.active=true
-#
-
-
-### -P DWAFeature.active=<value>
-
-
-################################################################################
-#
-# "Web Services Data Files" Feature
-#
-# The selection state of the "Web Services Data Files" feature. Legal values
-# are:
-# 
-#    true  - Indicates that the feature is selected for installation
-#    false - Indicates that the feature is not selected for installation
-# 
-# For example, to select "Web Services Data Files" for installation, use
-# 
-#    -P beanWebServicesDataFiles.active=true
-#
-
-
-### -P beanWebServicesDataFiles.active=<value>
-
-
-################################################################################
-#
-# "Resource Modeling Engine" Feature
-#
-# The selection state of the "Resource Modeling Engine" feature. Legal values
-# are:
-# 
-#    true  - Indicates that the feature is selected for installation
-#    false - Indicates that the feature is not selected for installation
-# 
-# For example, to select "Resource Modeling Engine" for installation, use
-# 
-#    -P RMEFeature.active=true
-#
-
-
-### -P RMEFeature.active=<value>
-
-
-################################################################################
-#
-# "Help" Feature
-#
-# The selection state of the "Help" feature. Legal values are:
-# 
-#    true  - Indicates that the feature is selected for installation
-#    false - Indicates that the feature is not selected for installation
-# 
-# For example, to select "Help" for installation, use
-# 
-#    -P HelpFeature.active=true
-#
-
-
-### -P HelpFeature.active=<value>
-
-
-################################################################################
-#
-# "OS Integration Linux" Feature
-#
-# The selection state of the "OS Integration Linux" feature. Legal values are:
-# 
-#    true  - Indicates that the feature is selected for installation
-#    false - Indicates that the feature is not selected for installation
-# 
-# For example, to select "OS Integration Linux" for installation, use
-# 
-#    -P OSIntegFeatureLinux.active=true
-#
-
-
-### -P OSIntegFeatureLinux.active=<value>

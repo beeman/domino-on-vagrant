@@ -28,10 +28,10 @@ service ntpd start
 
 
 # Set limits
-ulimit -n 20000 
+ulimit -n 60000 
 
-echo "vagrant         soft    nofile          65535"  >> /etc/security/limits.conf 
-echo "vagrant         hard    nofile          65535 "  >> /etc/security/limits.conf 
+echo "vagrant         soft    nofile          60000"  >> /etc/security/limits.conf 
+echo "vagrant         hard    nofile          80000 "  >> /etc/security/limits.conf 
 
 # Install Domino 
 cd /vagrant/scripts/
