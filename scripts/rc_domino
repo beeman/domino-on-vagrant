@@ -15,8 +15,8 @@
 
 ### BEGIN INIT INFO
 # Provides: rc_domino
-# Required-Start: $remote_fs $syslog $network 
-# Required-Stop:  $remote_fs $syslog 
+# Required-Start: $remote_fs $syslog $network
+# Required-Stop:  $remote_fs $syslog
 # Default-Start:  3 5
 # Default-Stop:   0 1 2 6
 # Short-Description: IBM Lotus Domino Server (notes)
@@ -48,7 +48,7 @@ if [ "$LOGNAME" = "$DOMINO_USER" ] ; then
     SWITCH_USER=1
   fi
 else
-  # If you are running on non-Solaris platforms you might get away without 
+  # If you are running on non-Solaris platforms you might get away without
   # changing the user. For Solaris this is mandatory. See readme for details.
   SWITCH_USER=1
 fi
@@ -64,7 +64,7 @@ else
 fi
 
 # Special handling for RedHat start/stop
-if [ "$LINUX_DISTRIBUTION" = "redhat" ] ; then 
+if [ "$LINUX_DISTRIBUTION" = "redhat" ] ; then
 
   if [ "$1" = "start" ] ; then
    start_stop=1
@@ -94,7 +94,7 @@ fi
 
 
 # Special handling for RedHat start/stop
-if [ "$LINUX_DISTRIBUTION" = "redhat" ] ; then 
+if [ "$LINUX_DISTRIBUTION" = "redhat" ] ; then
 
   # Source function library.
   . /etc/rc.d/init.d/functions
@@ -120,4 +120,3 @@ if [ "$LINUX_DISTRIBUTION" = "redhat" ] ; then
 
   exit $RETVAL
 fi
-

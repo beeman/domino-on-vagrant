@@ -5,8 +5,7 @@ sudo -s
 yum install -y unzip ntp
 
 # Permissions
-chown vagrant:vagrant /data/
-chown vagrant:vagrant /opt/
+chown vagrant:vagrant /local/
 
 # Disable services
 chkconfig iptables off
@@ -20,5 +19,5 @@ ntpdate pool.ntp.org
 chkconfig ntpd on
 service ntpd start
 
-# Install Domino 
+# Install Domino
 # /vagrant/scripts/install-domino.sh

@@ -1,5 +1,5 @@
 # This script will try to automatically install and configure a IBM Domino server
-# 
+#
 # Bram Borggreve (c) 2014
 # Distributed under the Apache License
 
@@ -24,25 +24,33 @@ fi
 sudo yum install -y glibc.i686 libgcc.i686 libstdc++.i686
 
 # Set some OS limits
-ulimit -n 60000 
+ulimit -n 60000
 
-echo "vagrant         soft    nofile          60000"  >> /etc/security/limits.conf 
-echo "vagrant         hard    nofile          80000"  >> /etc/security/limits.conf 
+echo "vagrant         soft    nofile          60000"  >> /etc/security/limits.conf
+echo "vagrant         hard    nofile          80000"  >> /etc/security/limits.conf
 
 # Run the installer
 cd /vagrant/data/linux64/DominoEval/
 sudo ./install -silent -options "/vagrant/data/response.dat"
 
 # Configure the Domino server
-# cd /opt/ibm/lotus/
-# sudo ./server TODO "/vagrant/data/vagrant.pds"
+cd /local/notesdata/
+sudo -u vagrant /opt/ibm/lotus/bin/server -silent /vagrant/data/vagrant.pds
 
 # Copy and configure init script
-cp -rv /vagrant/scripts/rc_domino /etc/init.d/rc_domino
-chmod 755 /etc/init.d/rc_domino
+sudo cp -rv /vagrant/scripts/rc_domino /etc/init.d/rc_domino
+sudo chmod 755 /etc/init.d/rc_domino
 
-cp -rv /vagrant/scripts/rc_domino_script /opt/ibm/lotus/rc_domino_script
-chmod 755 /opt/ibm/lotus/rc_domino_script
+sudo cp -rv /vagrant/scripts/rc_domino_script /opt/ibm/lotus/rc_domino_script
+sudo chmod 755 /opt/ibm/lotus/rc_domino_script
+
+sudo cp -rv /vagrant/scripts/rc_domino_config_vagrant /etc/sysconfig/rc_domino_config_vagrant
 
 # Enable the init script
-chkconfig --add rc_domino 
+sudo chkconfig --add rc_domino
+
+# Start the Domino server
+sudo /etc/init.d/rc_domino start
+
+
+sudo /etc/init.d/rc_domino monitor
