@@ -1,5 +1,8 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
+#
+# Copyright 2014 Bram Borggreve
+# Distributed under the Apache License
 
 gui      = true
 
