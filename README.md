@@ -4,21 +4,23 @@
 
 Run IBM Domino on a CentOS 6 instance in Vagrant
 
-# Requirements
+## Abstract
 
-* Vagrant, free and open source (blabla, check http://www.vagrantup.com/ for now )
-* VirtualBox, free and open source (blabla, check https://www.virtualbox.org/ for now )
+This projects aims to deliver an environment to quickly deploy a Domino server on a virtual Linux machine. It does so by using [VirtualBox](https://www.virtualbox.org/) and [Vagrant](https://www.vagrantup.com/) combined with a CentOS 6 image and some scripts.
 
-# How to use it
+## Reasons
 
-* Clone this project
-* Download 'IBM Domino Enterprise Server V9.0.1 Social Edition 64-bit for Linux for xSeries' 
-* Put the downloaded file ( DOMI_SRV_901_LIN_XS64_EN_-TRIAL.tar ) in the data directory
-* Run 'vagrant up'
-* Configure the Domino server
-* Profit ;-)
+Some of the reasons why I created it:
 
-# License
+* being able to create separate Domino environments for testing and developing
+* not manually installing these environments time after time
+* show Domino/XPages developers the power of Vagrant
+* give something to the community
+* I think it's fun to do :-)
 
-In compliance with the code on OpenNTF this project is licensed under the Apache License.
+## Usage
+[Learn how to use it by reading the tutorial.](TUTORIAL.md)
 
+## License
+
+This project is licensed under the [Apache License](LICENSE).

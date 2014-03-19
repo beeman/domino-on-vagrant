@@ -2,20 +2,6 @@
 
 Here is a step by step guide to run the [Domino on Vagrant](https://github.com/beeman/domino-on-vagrant) project.
 
-## Abstract
-
-This projects aims to deliver an environment to quickly deploy a Domino server on a virtual Linux machine. It does so by using [VirtualBox](https://www.virtualbox.org/) and [Vagrant](https://www.vagrantup.com/).
-
-### Reasons
-
-Some of the reasons why I created it:
-
-* being able to create separate Domino environments for testing and developing
-* not manually installing these environments time after time
-* show Domino/XPages developers the power of Vagrant
-* give back to the community
-* I think it is fun to do!
-
 ## Requirements
 
 It is assumed that you have [VirtualBox]() and [Vagrant]() running on a Mac or Linux machine. The procedure will be more or less the same for Windows and a specific tutorial might be provided in the future.
@@ -77,7 +63,7 @@ When the machine is installed you should be able to connect to it via a browser.
 
 The user in the linux guest has the following credentials. This is main user of the guest and it is running the Domino server too.
 
-    username   : vagrant  (these are used to run domino too)
+    username   : vagrant
     group      : vagrant
 
 To login on the Domino environment you need to use the following credentials
@@ -137,7 +123,7 @@ By default the VirtualBox console to this server is hidden. Most of the time thi
     TODO add instructions
 
 
-## TLDR Installation
+## TL;DR Installation
 
 Because sometimes you're in a hurry...
 
