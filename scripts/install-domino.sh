@@ -24,10 +24,10 @@ fi
 sudo yum install -y glibc.i686 libgcc.i686 libstdc++.i686
 
 # Set some OS limits
-ulimit -n 60000
+sudo ulimit -n 60000
 
-echo "vagrant         soft    nofile          60000"  >> /etc/security/limits.conf
-echo "vagrant         hard    nofile          80000"  >> /etc/security/limits.conf
+echo "vagrant         soft    nofile          60000"  | sudo tee -a /etc/security/limits.conf
+echo "vagrant         hard    nofile          80000"  | sudo tee -a /etc/security/limits.conf
 
 # Run the installer
 cd /vagrant/data/linux64/DominoEval/
