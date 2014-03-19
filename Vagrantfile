@@ -19,7 +19,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.network :private_network, ip: ip
 
-  config.vm.synced_folder "./data/", "/data/"
+  config.vm.synced_folder "./notesdata/", "/local/notesdata"
 
   config.vm.provider :virtualbox do |vb|
     vb.customize ["modifyvm", :id, "--memory", ram, "--name", hostname, "--natdnshostresolver1", "on"]

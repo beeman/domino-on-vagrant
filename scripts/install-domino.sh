@@ -27,16 +27,15 @@ sudo yum install -y glibc.i686 libgcc.i686 libstdc++.i686
 ulimit -n 60000 
 
 echo "vagrant         soft    nofile          60000"  >> /etc/security/limits.conf 
-echo "vagrant         hard    nofile          80000 "  >> /etc/security/limits.conf 
+echo "vagrant         hard    nofile          80000"  >> /etc/security/limits.conf 
 
 # Run the installer
 cd /vagrant/data/linux64/DominoEval/
 sudo ./install -silent -options "/vagrant/data/response.dat"
 
-
-echo 'fin'
-exit 
-
+# Configure the Domino server
+# cd /opt/ibm/lotus/
+# sudo ./server TODO "/vagrant/data/vagrant.pds"
 
 # Copy and configure init script
 cp -rv /vagrant/scripts/rc_domino /etc/init.d/rc_domino
