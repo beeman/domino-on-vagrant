@@ -14,7 +14,7 @@ I created this because I want to:
 
 * run my Domino server on Linux instead of Windows
 * be able to create separate Domino environments for testing and developing
-* not manually installing these environments time after time
+* not manually install these environments time after time
 * give something to the community
 * show Domino/XPages developers the power of Vagrant
 
