@@ -6,7 +6,9 @@ Run IBM Domino on a CentOS 6 instance in Vagrant
 
 ## Abstract
 
-This projects aims to deliver an environment to quickly deploy a Domino server on a virtual Linux machine. It does so by using [VirtualBox](https://www.virtualbox.org/) and [Vagrant](https://www.vagrantup.com/) combined with a CentOS 6 image and some scripts.
+This projects aims to deliver an environment to quickly deploy a Domino server on a virtual Linux machine. It does so by using [VirtualBox](https://www.virtualbox.org/) and [Vagrant](https://www.vagrantup.com/) combined with a CentOS 6 image and some custom scripts.
+
+For managing the Domino server the great [Domino on Unix/Linux Start Script](http://www.nashcom.de/nshweb/pages/startscript.htm) by Daniel Nashed is used!
 
 ## Reasons
 
@@ -27,7 +29,9 @@ Next to the above I just think it's fun to do and cool to have :-)
 
 Please use the GitHub issue tracker to let me know what you like to see changed. Of course I'm also open for pull requests!
 
-## License
+## Legal stuff
+
+**Please use this software for developing, testing or demonstrations only. These machines are not tuned and secured enough to use in production. **
 
 Copyright 2014 Bram Borggreve
 

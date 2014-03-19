@@ -77,6 +77,21 @@ To login on the Domino environment you need to use the following credentials
 
 ## Usage
 
+### Login to this virtual machine using vagrant (easiest way)
+
+    $ cd dov-demo/domino-on-vagrant
+    $ vagrant ssh
+
+### Login to this virtual machine using SSH
+
+    $ ssh vagrant@10.2.2.2   # default password: vagrant
+
+### Sharing files
+
+The directory ```domino-on-vagrant``` is shared inside the guest OS. You can find it mounted to ```/vagrant```.
+
+Next to that the data there is a folder called ```notesdata``` on your host that is mounted at ```/local/notesdata```
+
 ### WebAdmin
 
 A lot of admin functionality is available through webadmin.nsf. The tool can be found on one of the following links, depending on the DNS configuration (see section on hostnames below)
@@ -91,16 +106,7 @@ You can easily access the guest by entering it to your hosts file
 
     10.2.2.2 dov dov.domino.dev
 
-Another option is to install a tool like dnsmasq that can locally point the domain domino.dev to the IP address of the server.
-
-### Login to this virtual machine using vagrant
-
-    $ cd dov-demo/domino-on-vagrant
-    $ vagrant ssh
-
-### Login to this virtual machine using SSH
-
-    $ ssh vagrant@10.2.2.2 # password: vagrant
+Another option is to install a tool like dnsmasq that can locally point the domain domino.dev to the IP address of the server. Check [this page](http://passingcuriosity.com/2013/dnsmasq-dev-osx/) to get you started.
 
 
 
