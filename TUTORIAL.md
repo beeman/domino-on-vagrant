@@ -120,9 +120,15 @@ You can easily access the guest by entering it to your hosts file
 Another option is to install a tool like dnsmasq that can locally point the domain domino.dev to the IP address of the server. Check [this page](http://passingcuriosity.com/2013/dnsmasq-dev-osx/) to get you started.
 
 
+### Domino
 
+You can start / stop the Domino server from inside the guest.
 
+    sudo /etc/init.d/rc_domino start # / stop
 
+You can even enter an interactive console monitor!
+
+    sudo /etc/init.d/rc_domino monitor
 
 ## Configuration
 
