@@ -16,7 +16,7 @@ The following steps are needed to get up and running with Domino on Vagrant.
 
 ### Install a Vagrant plugin (first time only!)
 
-This plugin takes care of automagically updating the VirtualBox Guest Additions. This is needed for CentOS 6 to run correctly. I won't go in too much detail on this, just fire and forget ;-)
+This plugin takes care of automagically updating the VirtualBox Guest Additions. The CentOS 6 image needs this to run correctly.
 
     $ vagrant plugin install vagrant-vbguest
 
@@ -77,6 +77,15 @@ To login on the Domino environment you need to use the following credentials
 
 ## Usage
 
+
+### Starting / Stopping the guest
+
+    $ cd dov-demo/domino-on-vagrant
+    $ vagrant up    # this starts your guest
+    $ vagrant halt  # this stops your guest
+
+For more commands run ```vagrant --help```
+
 ### Login to this virtual machine using vagrant (easiest way)
 
     $ cd dov-demo/domino-on-vagrant
@@ -100,6 +109,8 @@ A lot of admin functionality is available through webadmin.nsf. The tool can be 
 * http://10.2.2.2/webadmin.nsf
 * http://dov/webadmin.nsf
 
+I use the webadmin to get the ID file of the admin user, because I don't know a quicker way :)
+
 ### Hostnames
 
 You can easily access the guest by entering it to your hosts file
@@ -115,31 +126,13 @@ Another option is to install a tool like dnsmasq that can locally point the doma
 
 ## Configuration
 
-### Change network configuration
+### Network
 
-#### Hostname and domain
+The hostname, domain and IP address are defined in the ```Vagrantfile```
 
-    TODO add instructions
-
-#### IP Address
-
-    TODO add instructions
-
-#### Network type
-
-    TODO add instructions to go Bridged
-
-### Share Domino data directory
-
-The Domino Server keeps it's data in the folder ```/local/notesdata```. It's possible to make this data available to your host machine by adding a shared folder.  
-
-    TODO add instructions
-
-### Enabling the GUI
+### GUI
 
 By default the VirtualBox console to this server is hidden. Most of the time this is perfectly fine because you interact with the server by other means, for instance ```vagrant ssh```
-
-    TODO add instructions
 
 
 ## TL;DR Installation
