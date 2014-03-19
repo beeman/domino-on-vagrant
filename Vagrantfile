@@ -1,14 +1,14 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-gui      = false
+gui      = true
 
 box      = 'centos-6-amd64'
 url      = 'https://dl.dropboxusercontent.com/s/uky9fimq2eal2l4/centos-6-amd64.box'
 hostname = 'dov'
 domain   = 'domino.dev'
 ip       = '10.2.2.2'
-ram      = '1024'
+ram      = '2048'
 
 VAGRANTFILE_API_VERSION = "2"
 
