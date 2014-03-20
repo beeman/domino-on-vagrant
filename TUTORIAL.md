@@ -72,9 +72,11 @@ The user in the linux guest has the following credentials. This is main user of 
 
 To login on the Domino environment you need to use the following credentials
 
-    username   : admin
+    username   : admin/dominodev
     password   : dominodev
+    id file    : notesdata/admin.id
 
+    
 ## Usage
 
 
