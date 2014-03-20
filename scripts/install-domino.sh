@@ -21,9 +21,6 @@ if [ ! -f /vagrant/data/vagrant.pds ]; then
 	exit 1
 fi
 
-# Output timestamp
-date
-
 #
 # Install needed packages
 #
@@ -36,6 +33,9 @@ ulimit -n 60000
 
 echo "vagrant         soft    nofile          60000"  | sudo tee -a /etc/security/limits.conf
 echo "vagrant         hard    nofile          80000"  | sudo tee -a /etc/security/limits.conf
+
+# Output timestamp
+date
 
 #
 # Run the installer
@@ -60,6 +60,9 @@ sudo cp -rv /vagrant/scripts/rc_domino_config_vagrant /etc/sysconfig/rc_domino_c
 # Enable the init script
 #
 sudo chkconfig --add rc_domino
+
+# Output timestamp
+date
 
 #
 # Configure the Domino server if there is no names.nsf
