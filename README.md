@@ -31,7 +31,7 @@ Please use the GitHub issue tracker to let me know what you like to see changed.
 
 ## Legal stuff
 
-**Please use this software for developing, testing or demonstrations only. These machines are not tuned and secured enough to use in production. **
+**Please use this software for developing, testing or demonstrations only. These machines are not tuned and secured enough to use in production.**
 
 Copyright 2014 Bram Borggreve
 
