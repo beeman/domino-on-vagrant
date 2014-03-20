@@ -21,6 +21,9 @@ if [ ! -f /vagrant/data/vagrant.pds ]; then
 	exit 1
 fi
 
+# Output timestamp
+date
+
 #
 # Install needed packages
 #
@@ -71,8 +74,5 @@ fi
 #
 sudo /etc/init.d/rc_domino start
 
-#
-# Start the monitor
-#
-sudo /etc/init.d/rc_domino monitor
-#
+# Output timestamp
+date
